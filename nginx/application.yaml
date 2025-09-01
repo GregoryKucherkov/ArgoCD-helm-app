@@ -5,10 +5,9 @@ metadata:
   namespace: infra-tools
 spec:
   project: default
-
   source:
     repoURL: https://github.com/GregoryKucherkov/ArgoCD-helm-app.git
-    targetRevision: main
+    targetRevision: master
     path: nginx
     helm:
       values: |
