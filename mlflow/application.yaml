@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlflow
+  namespace: infra-tools
+spec:
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: mlflow
+  project: default
+  source:
+    repoURL: https://github.com/GregoryKucherkov/ArgoCD-helm-app.git
+    targetRevision: main
+    path: mlflow
+    
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    
