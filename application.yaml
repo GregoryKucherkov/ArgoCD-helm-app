@@ -7,17 +7,17 @@ spec:
   project: default
   source:
     repoURL: https://github.com/GregoryKucherkov/ArgoCD-helm-app.git
-    targetRevision: master
-    # path: nginx
-    chart: nginx
-    helm:
-      values: |
-        image:
-          tag: "latest"
-        service:
-          type: ClusterIP
-        ingress:
-          enabled: false
+    targetRevision: HEAD
+    path: nginx
+    # chart: nginx
+    # helm:
+    #   values: |
+    #     image:
+    #       tag: "latest"
+    #     service:
+    #       type: ClusterIP
+    #     ingress:
+    #       enabled: false
 
   destination:
     server: https://kubernetes.default.svc
