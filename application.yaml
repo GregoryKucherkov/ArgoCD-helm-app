@@ -7,7 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/GregoryKucherkov/ArgoCD-helm-app.git
-    targetRevision: HEAD
+    # targetRevision: "master"
+    targetRevision: 362526cf36efe31ef15596233617190b8cad2b9d
     path: nginx
     # chart: nginx
     # helm:
