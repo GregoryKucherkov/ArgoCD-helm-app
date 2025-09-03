@@ -8,7 +8,8 @@ spec:
   source:
     repoURL: https://github.com/GregoryKucherkov/ArgoCD-helm-app.git
     targetRevision: master
-    path: nginx
+    # path: nginx
+    chart: nginx
     helm:
       values: |
         image:
